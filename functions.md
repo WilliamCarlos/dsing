@@ -12,7 +12,7 @@ f(x) = x^2
 3. and "gives back" that new thing (x*x)
 
 Let's say our input is 2.
-1. we give the function 2: f(2)
+1. we give the function our input, 2: f(2)
 2. The function, f, does something to our input: 2*2
 3. The function, f, gives us back our modified input (2*2 -> 4). 
 
