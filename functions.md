@@ -1,20 +1,82 @@
-
+### Functions in math
 In math, functions are things that take the form:
 ```
-function(input) = [do something to the input]
+function(input) = [do something to the input and give that back] 
 ```
 
 For example, the function
 f(x) = x^2
-Takes an input (x), does something to the input (squares it, x -> x*x), and "gives back" that new thing (x*x)
+
+1. Takes an input (x)
+2. Does something to the input (squares it, x -> x*x)
+3. and "gives back" that new thing (x*x)
 
 Let's say our input is 2.
-f(2) -> 2*2 (does something to our input) -> gives us back our modified input (4). 
+1. we give the function 2: f(2)
+2. The function, f, does something to our input: 2*2
+3. The function, f, gives us back our modified input (2*2 -> 4). 
 
+### Python functions do the same thing
 
-Python functions do the same thing
+1. We specify what we want to give our function, our inputs, in the function header
 ```
-def square_this_number(input_num): # we take in some input, num_input
+def some_function(input1, input2, input3): # this line is the function header
+    [body of function]
+```
+
+2. We do stuff in the function in the body of the function. We "modify our input". 
+```
+def some_function(input1, input2, input3): # this line is the function header
+    # Body of function
+    new_variable1 = input2 + input3
+    new_variable2 = input1 * input2 * input3
+    new_variable3 = 5
+    # WhatEVER you want the world is your oyester
+```
+
+3. Our function "gives back" our modified input. But ONLY what you tell it to.
+```
+def some_function(input1, input2, input3): # this line is the function header
+    # Body of function
+    new_variable1 = input2 + input3
+    new_variable2 = input1 * input2 * input3
+    new_variable3 = 5
+    # WhatEVER you want the world is your oyester
+
+    return new_variable1
+```
+You tell a python function what to "give back" by using the "return" keyword.
+So in this case, some_function() will "give back" new_variable1 because we wrote
+"return new_variable1"
+
+* All the calculations you do in your function that you do not return WILL DISAPPEAR *
+* So you MUST "return" all variables you want to keep! *
+(except for mutable variables, which are pass by ref in python, but ignore this for now)
+
+
+Now, Dsing. You might be wondering. What does it mean for a function to "return" something?
+Well now, that's a darn 'n dandy good question as old as time.
+
+If you call a function, the variables it returns will be assigned to the left hand side of the function call.
+```
+	[stuff random_function() returns] = random_function()
+```
+In relation to the above example, some_function():
+```
+	[new_variable1] = some_function()
+```
+some_function() "returned" or "gave back" new_variable1, so the left hand side of the = will be assigned new_variable1.
+
+```
+	# In this case, what_func_gives_back = new_variable1 since that's what some_function() returns
+	what_func_gives_back = some_function() 
+```
+
+
+### A concrete example
+Suppose we have a function that squares a number.
+```
+def square_this_number(input_num): # we take in some input, num_input (i.e. the number we want to square)
 
     # We do whatever calculations we want to do here. For example, we can square it like f(x) = x^2
     square = input_num * input_num # equivalent to x*x
