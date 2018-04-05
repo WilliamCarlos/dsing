@@ -1,6 +1,8 @@
 
-In math, functions are things that take the form
+In math, functions are things that take the form:
+```
 function(input) = [do something to the input]
+```
 
 For example, the function
 f(x) = x^2
@@ -28,4 +30,33 @@ def square_this_number(input_num): # we take in some input, num_input
     
 ```
     
-    
+So now, if we call the function:
+
+```
+returned_number = square_this_number(5)
+```
+The returned_number will store what you returned: the variable square.
+If you don't have any "return" in the function, it will not "give back" anything and returned_number will be "None".
+
+Likewise, you can return more than one thing. For example, change:
+```
+return square
+```
+to
+```
+return square, cube
+```
+and the function call will look like this:
+```
+returned_square, returned_cube = square_this_number(5)
+```
+So now, the function gives back two things. The variable square, and the variable cube (in that order).
+
+
+TLDR after you do calculations in a function and have them stored in variables in the function,
+return [var1], [var2], ... , [varn] will make the function "give back" or "return" those variables to the place where you called the function:
+```
+var1, var2, ... varn = function_call(input_vars)
+```
+
+
