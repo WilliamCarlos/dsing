@@ -48,8 +48,9 @@ def some_function(input1, input2, input3): # this line is the function header
 So in this case, some_function() will "give back" new_variable1 because we wrote
 "return new_variable1"
 
-*All the calculations you do in your function that you do not return WILL DISAPPEAR*
-*So you MUST "return" all variables you want to keep!*
+**All the calculations you do in your function that you do not return WILL DISAPPEAR**
+
+**So you MUST "return" all variables you want to keep!**
 (except for mutable variables, which are pass by ref in python, but ignore this for now)
 
 
