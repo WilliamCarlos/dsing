@@ -68,10 +68,9 @@ In relation to the above example, some_function():
 some_function() "returned" or "gave back" new_variable1, so the left hand side of the = will be assigned whatever new_variable1 was storing.
 
 ```
-	# In this case, what_func_gives_back = new_variable1 since that's what some_function() returns
 	what_func_gives_back = some_function(3, 5, 7) 
 ```
-
+So, above, what_func_gives_back := new_variable1 since that's what some_function() returns
 
 ### A concrete example
 Suppose we have a function that squares a number.
