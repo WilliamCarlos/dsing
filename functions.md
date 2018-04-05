@@ -24,17 +24,17 @@ def some_function(input1, input2, input3): # this line is the function header
     [body of function]
 ```
 
-2. We do stuff in the function in the body of the function. We "modify our input". 
+2. We do stuff in the body of the function. We "modify our input". 
 ```
 def some_function(input1, input2, input3): # this line is the function header
     # Body of function
     new_variable1 = input2 + input3
     new_variable2 = input1 * input2 * input3
     new_variable3 = 5
-    # WhatEVER you want the world is your oyester
+    # WhatEVER computation you want the world is your oyester
 ```
 
-3. Our function "gives back" our modified input. But ONLY what you tell it to.
+3. Our function "gives back" our modified input. But ONLY what you tell it to. You tell a function what to "give back" by using the "return" keyword. 
 ```
 def some_function(input1, input2, input3): # this line is the function header
     # Body of function
@@ -45,12 +45,11 @@ def some_function(input1, input2, input3): # this line is the function header
 
     return new_variable1
 ```
-You tell a python function what to "give back" by using the "return" keyword.
 So in this case, some_function() will "give back" new_variable1 because we wrote
 "return new_variable1"
 
-* All the calculations you do in your function that you do not return WILL DISAPPEAR *
-* So you MUST "return" all variables you want to keep! *
+*All the calculations you do in your function that you do not return WILL DISAPPEAR*
+*So you MUST "return" all variables you want to keep!*
 (except for mutable variables, which are pass by ref in python, but ignore this for now)
 
 
@@ -63,13 +62,13 @@ If you call a function, the variables it returns will be assigned to the left ha
 ```
 In relation to the above example, some_function():
 ```
-	[new_variable1] = some_function()
+	[new_variable1] = some_function(3, 5, 7)
 ```
-some_function() "returned" or "gave back" new_variable1, so the left hand side of the = will be assigned new_variable1.
+some_function() "returned" or "gave back" new_variable1, so the left hand side of the = will be assigned whatever new_variable1 was storing.
 
 ```
 	# In this case, what_func_gives_back = new_variable1 since that's what some_function() returns
-	what_func_gives_back = some_function() 
+	what_func_gives_back = some_function(3, 5, 7) 
 ```
 
 
